@@ -23,9 +23,9 @@
 
 package be.yildizgames.engine.feature.mission.task;
 
+import be.yildiz.common.graphic.MaterialId;
 import be.yildiz.common.translation.TranslatedValue;
 import be.yildiz.common.translation.TranslatedValueProvider;
-import be.yildiz.module.graphic.Material;
 
 /**
  * @author Grégory Van den Borre
@@ -33,11 +33,11 @@ import be.yildiz.module.graphic.Material;
 public class ClientTaskGuiMaterialization implements TranslatedValueProvider {
 
 
-    private final Material image;
+    private final MaterialId image;
 
     private final TranslatedValue translation;
 
-    public ClientTaskGuiMaterialization(TranslatedValue translation, Material image) {
+    public ClientTaskGuiMaterialization(TranslatedValue translation, MaterialId image) {
         this.translation = translation;
         this.image = image;
     }

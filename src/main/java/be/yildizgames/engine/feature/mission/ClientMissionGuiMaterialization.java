@@ -25,8 +25,8 @@
 package be.yildizgames.engine.feature.mission;
 
 import be.yildiz.common.collections.Lists;
+import be.yildiz.common.graphic.MaterialId;
 import be.yildiz.common.translation.*;
-import be.yildiz.module.graphic.Material;
 
 import java.util.Iterator;
 import java.util.List;
@@ -40,11 +40,11 @@ public class ClientMissionGuiMaterialization implements TranslatedValuesProvider
 
     public final Key description;
 
-    public final Material image;
+    public final MaterialId image;
 
     private final List<TranslatedValueProvider> translations = Lists.newList();
 
-    public ClientMissionGuiMaterialization(TranslatedValue title, TranslatedValue description, Material image) {
+    public ClientMissionGuiMaterialization(TranslatedValue title, TranslatedValue description, MaterialId image) {
         this.translations.add(new SimpleTranslatedValueProvider(title));
         this.title = Key.get(title.getKey());
         this.translations.add(new SimpleTranslatedValueProvider(description));

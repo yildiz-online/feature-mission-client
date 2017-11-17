@@ -25,6 +25,7 @@
 package be.yildizgames.engine.feature.mission;
 
 
+import be.yildiz.common.graphic.MaterialId;
 import be.yildiz.common.id.PlayerId;
 import be.yildiz.common.translation.Key;
 import be.yildizgames.engine.feature.mission.reward.RewardId;
@@ -79,7 +80,7 @@ public class ClientMission implements Mission {
         return this.materialization.description;
     }
 
-    public final Material getIcon() {
+    public final MaterialId getIcon() {
         return this.materialization.image;
     }
 }
