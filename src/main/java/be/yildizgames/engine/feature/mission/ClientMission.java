@@ -25,7 +25,6 @@
 package be.yildizgames.engine.feature.mission;
 
 
-import be.yildiz.common.graphic.MaterialId;
 import be.yildiz.common.translation.Key;
 import be.yildizgames.common.model.PlayerId;
 import be.yildizgames.engine.feature.mission.reward.RewardId;
@@ -36,13 +35,13 @@ import java.util.Set;
 /**
  * @author Grégory Van den Borre
  */
-public class ClientMission implements Mission {
+public class ClientMission<T> implements Mission {
 
     private final Mission mission;
 
-    private final ClientMissionGuiMaterialization materialization;
+    private final ClientMissionGuiMaterialization<T> materialization;
 
-    public ClientMission(Mission mission, ClientMissionGuiMaterialization materialization) {
+    public ClientMission(Mission mission, ClientMissionGuiMaterialization<T> materialization) {
         this.mission = mission;
         this.materialization = materialization;
     }
@@ -80,7 +79,7 @@ public class ClientMission implements Mission {
         return this.materialization.description;
     }
 
-    public final MaterialId getIcon() {
+    public final T getIcon() {
         return this.materialization.image;
     }
 }

@@ -31,7 +31,7 @@ import be.yildizgames.engine.feature.mission.task.TaskStatusListener;
 /**
  * @author Grégory Van den Borre
  */
-public class ClientTask implements Task{
+public class ClientTask implements Task {
 
     private final Task task;
 
