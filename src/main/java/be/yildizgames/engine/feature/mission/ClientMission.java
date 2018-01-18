@@ -26,8 +26,8 @@ package be.yildizgames.engine.feature.mission;
 
 
 import be.yildiz.common.graphic.MaterialId;
-import be.yildiz.common.id.PlayerId;
 import be.yildiz.common.translation.Key;
+import be.yildizgames.common.model.PlayerId;
 import be.yildizgames.engine.feature.mission.reward.RewardId;
 import be.yildizgames.engine.feature.mission.task.TaskId;
 

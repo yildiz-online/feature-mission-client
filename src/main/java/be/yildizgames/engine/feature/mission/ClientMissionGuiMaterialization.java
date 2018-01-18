@@ -24,9 +24,9 @@
 
 package be.yildizgames.engine.feature.mission;
 
-import be.yildiz.common.collections.Lists;
 import be.yildiz.common.graphic.MaterialId;
 import be.yildiz.common.translation.*;
+import be.yildizgames.common.collection.Lists;
 
 import java.util.Iterator;
 import java.util.List;
