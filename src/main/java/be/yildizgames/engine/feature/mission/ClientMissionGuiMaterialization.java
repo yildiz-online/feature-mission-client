@@ -1,7 +1,7 @@
 /*
  * This file is part of the Yildiz-Engine project, licenced under the MIT License  (MIT)
  *
- *  Copyright (c) 2017 Grégory Van den Borre
+ *  Copyright (c) 2018 Grégory Van den Borre
  *
  *  More infos available: https://www.yildiz-games.be
  *
@@ -24,7 +24,11 @@
 
 package be.yildizgames.engine.feature.mission;
 
-import be.yildiz.common.translation.*;
+import be.yildiz.common.translation.Key;
+import be.yildiz.common.translation.SimpleTranslatedValueProvider;
+import be.yildiz.common.translation.TranslatedValue;
+import be.yildiz.common.translation.TranslatedValueProvider;
+import be.yildiz.common.translation.TranslatedValuesProvider;
 import be.yildizgames.common.collection.Lists;
 
 import java.util.Iterator;
