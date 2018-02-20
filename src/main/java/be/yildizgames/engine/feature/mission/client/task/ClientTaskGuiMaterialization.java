@@ -22,45 +22,28 @@
  *
  */
 
-package be.yildizgames.engine.feature.mission.task;
+package be.yildizgames.engine.feature.mission.client.task;
 
-import be.yildiz.common.translation.TranslatedValue;
+import be.yildizgames.common.client.translation.TranslatedValue;
+import be.yildizgames.common.client.translation.TranslatedValueProvider;
 
 /**
  * @author Grégory Van den Borre
  */
-public class ClientTask implements Task {
+public class ClientTaskGuiMaterialization<T> implements TranslatedValueProvider {
 
-    private final Task task;
 
-    private final ClientTaskGuiMaterialization materialization;
+    private final T image;
 
-    public ClientTask(Task task, ClientTaskGuiMaterialization mat) {
-        this.task = task;
-        this.materialization = mat;
+    private final TranslatedValue translation;
+
+    public ClientTaskGuiMaterialization(TranslatedValue translation, T image) {
+        this.translation = translation;
+        this.image = image;
     }
 
     @Override
-    public final void addListener(TaskStatusListener taskStatusListener) {
-        this.task.addListener(taskStatusListener);
-    }
-
-    @Override
-    public final TaskId getId() {
-        return this.task.getId();
-    }
-
-    @Override
-    public final boolean isCompleted() {
-        return this.task.isCompleted();
-    }
-
-    @Override
-    public final boolean isFailed() {
-        return this.task.isFailed();
-    }
-
-    public final TranslatedValue getTranslation() {
-        return this.materialization.getTranslatedValue();
+    public TranslatedValue getTranslatedValue() {
+        return this.translation;
     }
 }

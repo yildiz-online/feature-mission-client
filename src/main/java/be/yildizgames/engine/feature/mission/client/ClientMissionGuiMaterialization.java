@@ -22,28 +22,41 @@
  *
  */
 
-package be.yildizgames.engine.feature.mission.task;
+package be.yildizgames.engine.feature.mission.client;
 
-import be.yildiz.common.translation.TranslatedValue;
-import be.yildiz.common.translation.TranslatedValueProvider;
+import be.yildizgames.common.client.translation.Key;
+import be.yildizgames.common.client.translation.SimpleTranslatedValueProvider;
+import be.yildizgames.common.client.translation.TranslatedValue;
+import be.yildizgames.common.client.translation.TranslatedValueProvider;
+import be.yildizgames.common.client.translation.TranslatedValuesProvider;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * @author Grégory Van den Borre
  */
-public class ClientTaskGuiMaterialization<T> implements TranslatedValueProvider {
+public class ClientMissionGuiMaterialization <T> implements TranslatedValuesProvider {
 
+    public final Key title;
 
-    private final T image;
+    public final Key description;
 
-    private final TranslatedValue translation;
+    public final T image;
 
-    public ClientTaskGuiMaterialization(TranslatedValue translation, T image) {
-        this.translation = translation;
+    private final List<TranslatedValueProvider> translations = new ArrayList<>();
+
+    public ClientMissionGuiMaterialization(TranslatedValue title, TranslatedValue description, T image) {
+        this.translations.add(new SimpleTranslatedValueProvider(title));
+        this.title = Key.get(title.getKey());
+        this.translations.add(new SimpleTranslatedValueProvider(description));
+        this.description = Key.get(description.getKey());
         this.image = image;
     }
 
     @Override
-    public TranslatedValue getTranslatedValue() {
-        return this.translation;
+    public Iterator<TranslatedValueProvider> iterator() {
+        return this.translations.iterator();
     }
 }

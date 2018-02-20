@@ -22,11 +22,13 @@
  *
  */
 
-package be.yildizgames.engine.feature.mission;
+package be.yildizgames.engine.feature.mission.client;
 
 
-import be.yildiz.common.translation.Key;
+import be.yildizgames.common.client.translation.Key;
 import be.yildizgames.common.model.PlayerId;
+import be.yildizgames.engine.feature.mission.Mission;
+import be.yildizgames.engine.feature.mission.MissionId;
 import be.yildizgames.engine.feature.mission.reward.RewardId;
 import be.yildizgames.engine.feature.mission.task.TaskId;
 

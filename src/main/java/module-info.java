@@ -22,41 +22,9 @@
  *
  */
 
-package be.yildizgames.engine.feature.mission;
+module be.yildizgames.feature.mission.client {
 
-import be.yildiz.common.translation.Key;
-import be.yildiz.common.translation.SimpleTranslatedValueProvider;
-import be.yildiz.common.translation.TranslatedValue;
-import be.yildiz.common.translation.TranslatedValueProvider;
-import be.yildiz.common.translation.TranslatedValuesProvider;
-import be.yildizgames.common.collection.Lists;
-
-import java.util.Iterator;
-import java.util.List;
-
-/**
- * @author Grégory Van den Borre
- */
-public class ClientMissionGuiMaterialization <T> implements TranslatedValuesProvider {
-
-    public final Key title;
-
-    public final Key description;
-
-    public final T image;
-
-    private final List<TranslatedValueProvider> translations = Lists.newList();
-
-    public ClientMissionGuiMaterialization(TranslatedValue title, TranslatedValue description, T image) {
-        this.translations.add(new SimpleTranslatedValueProvider(title));
-        this.title = Key.get(title.getKey());
-        this.translations.add(new SimpleTranslatedValueProvider(description));
-        this.description = Key.get(description.getKey());
-        this.image = image;
-    }
-
-    @Override
-    public Iterator<TranslatedValueProvider> iterator() {
-        return this.translations.iterator();
-    }
+    requires be.yildizgames.feature.mission.shared;
+    requires be.yildizgames.common.model;
+    requires be.yildizgames.common.client;
 }
