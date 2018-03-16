@@ -27,4 +27,7 @@ module be.yildizgames.feature.mission.client {
     requires be.yildizgames.feature.mission.shared;
     requires be.yildizgames.common.model;
     requires be.yildizgames.common.client;
+
+    exports be.yildizgames.engine.feature.mission.client;
+    exports be.yildizgames.engine.feature.mission.client.task;
 }
