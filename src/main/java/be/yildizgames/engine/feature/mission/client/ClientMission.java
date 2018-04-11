@@ -25,7 +25,7 @@
 package be.yildizgames.engine.feature.mission.client;
 
 
-import be.yildizgames.common.client.translation.Key;
+import be.yildizgames.common.client.translation.TranslationKey;
 import be.yildizgames.common.model.PlayerId;
 import be.yildizgames.engine.feature.mission.Mission;
 import be.yildizgames.engine.feature.mission.MissionId;
@@ -73,11 +73,11 @@ public class ClientMission<T> implements Mission {
         return this.mission.getReward();
     }
 
-    public final Key getTitle() {
+    public final TranslationKey getTitle() {
         return this.materialization.title;
     }
 
-    public final Key getDescription() {
+    public final TranslationKey getDescription() {
         return this.materialization.description;
     }
 

@@ -24,11 +24,11 @@
 
 package be.yildizgames.engine.feature.mission.client;
 
-import be.yildizgames.common.client.translation.Key;
 import be.yildizgames.common.client.translation.SimpleTranslatedValueProvider;
 import be.yildizgames.common.client.translation.TranslatedValue;
 import be.yildizgames.common.client.translation.TranslatedValueProvider;
 import be.yildizgames.common.client.translation.TranslatedValuesProvider;
+import be.yildizgames.common.client.translation.TranslationKey;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -39,9 +39,9 @@ import java.util.List;
  */
 public class ClientMissionGuiMaterialization <T> implements TranslatedValuesProvider {
 
-    public final Key title;
+    public final TranslationKey title;
 
-    public final Key description;
+    public final TranslationKey description;
 
     public final T image;
 
@@ -49,9 +49,9 @@ public class ClientMissionGuiMaterialization <T> implements TranslatedValuesProv
 
     public ClientMissionGuiMaterialization(TranslatedValue title, TranslatedValue description, T image) {
         this.translations.add(new SimpleTranslatedValueProvider(title));
-        this.title = Key.get(title.getKey());
+        this.title = TranslationKey.get(title.getKey());
         this.translations.add(new SimpleTranslatedValueProvider(description));
-        this.description = Key.get(description.getKey());
+        this.description = TranslationKey.get(description.getKey());
         this.image = image;
     }
 
