@@ -10,7 +10,7 @@ The library contains all the client components to use the mission feature.
 
 ## Requirements
 
-To build this module, you will need a java 9 JDK and Maven 3.
+To build this module, you will need the latest java JDK and Maven 3.
 
 ## Coding Style and other information
 
