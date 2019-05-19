@@ -56,7 +56,7 @@ public class ClientMissionGuiMaterialization <T> implements TranslatedValuesProv
     }
 
     @Override
-    public Iterator<TranslatedValueProvider> iterator() {
+    public final Iterator<TranslatedValueProvider> iterator() {
         return this.translations.iterator();
     }
 }

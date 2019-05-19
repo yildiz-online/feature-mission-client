@@ -84,4 +84,5 @@ public class ClientMission<T> implements Mission {
     public final T getIcon() {
         return this.materialization.image;
     }
+
 }

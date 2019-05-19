@@ -43,7 +43,7 @@ public class ClientTaskGuiMaterialization<T> implements TranslatedValueProvider 
     }
 
     @Override
-    public TranslatedValue getTranslatedValue() {
+    public final TranslatedValue getTranslatedValue() {
         return this.translation;
     }
 }

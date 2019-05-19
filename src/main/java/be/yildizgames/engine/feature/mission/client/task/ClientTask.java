@@ -66,4 +66,5 @@ public class ClientTask implements Task {
     public final TranslatedValue getTranslation() {
         return this.materialization.getTranslatedValue();
     }
+
 }
